@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Segoe UI,
+          sans-serif;
+      }
+
+      body {
+        background: #f4f6f9;
+      }
+
+      .header {
+        background: #2e7d32;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        background: #2e7d32;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      .customer-card {
+        background: white;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">👥 Customes</div>
+
+    <div class="container">
+      <input type="text" id="customerName" placeholder="Customer Name" />
+
+      <input type="text" id="customerPhone" placeholder="Phone Number" />
+
+      <button onclick="addCustomer()">Add Customer</button>
+
+      <div id="customerList"></div>
+    </div>
+  </body>
+  <script src="js/customer.js"></script>
+</html>

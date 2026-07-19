@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Laxmi Dairy Farm - Checkout</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="checkout-container">
+      <!-- TITLE -->
+
+      <h1 class="checkout-title">🛒 Checkout</h1>
+
+      <!-- DELIVERY DETAILS -->
+
+      <div class="delivery-card">
+        <h2>🚚 Delivery Details</h2>
+
+        <div class="delivery-form">
+          <div class="input-box">
+            <span>👤</span>
+
+            <input type="text" id="customerName" placeholder="Full Name" />
+          </div>
+
+          <div class="input-box">
+            <span>📞</span>
+
+            <input
+              type="tel"
+              id="customerPhone"
+              placeholder="Mobile Number"
+              maxlength="10"
+            />
+          </div>
+
+          <div class="input-box full">
+            <span>🏠</span>
+
+            <textarea
+              id="customerAddress"
+              placeholder="House No, Street, Area"
+            ></textarea>
+          </div>
+
+          <div class="input-box">
+            <span>🏙</span>
+
+            <input type="text" id="customerCity" placeholder="City" />
+          </div>
+
+          <div class="input-box">
+            <span>📮</span>
+
+            <input type="text" id="customerPincode" placeholder="Pincode" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDER SUMMARY -->
+
+      <div class="summary-card">
+        <h2>📦 Order Summary</h2>
+
+        <div class="summary-product">
+          <img id="summaryImage" src="" alt="Product" />
+
+          <div class="summary-info">
+            <h2 id="summaryName"></h2>
+
+            <p id="summaryPrice"></p>
+
+            <p id="summaryQty"></p>
+          </div>
+        </div>
+
+        <div class="summary-total">
+          <span>Total Amount</span>
+
+          <h2 id="summaryTotal"></h2>
+        </div>
+      </div>
+
+      <!-- PLACE ORDER -->
+
+      <button id="placeOrderBtn" class="place-order-btn">✅ Place Order</button>
+    </div>
+
+    <script src="js/checkout.js"></script>
+  </body>
+</html>

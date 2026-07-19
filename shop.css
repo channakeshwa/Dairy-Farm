@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f3f7f4;
+}
+
+/* HEADER */
+
+.header {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+
+  padding: 25px;
+
+  border-radius: 0 0 35px 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  color: white;
+}
+
+.header h1 {
+  font-size: 28px;
+}
+
+.header p {
+  font-size: 14px;
+
+  margin-top: 5px;
+}
+
+.header-logo {
+  width: 80px;
+
+  height: 80px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid white;
+}
+
+/* SEARCH */
+
+.search-box {
+  padding: 20px;
+}
+
+.search-box input {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  font-size: 16px;
+
+  box-shadow: 0 8px 20px #ddd;
+}
+
+/* TITLE */
+
+.section-title {
+  margin: 10px 20px;
+}
+
+/* PRODUCTS */
+
+.product-container {
+  padding: 20px;
+
+  display: grid;
+
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+
+  border-radius: 25px;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+  width: 140px;
+
+  height: 140px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+}
+
+.product-info h3 {
+  font-size: 25px;
+}
+
+.category {
+  display: inline-block;
+
+  background: #d8f5dd;
+
+  color: green;
+
+  padding: 8px 18px;
+
+  border-radius: 20px;
+
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 22px;
+
+  font-weight: bold;
+
+  color: #087b24;
+}
+
+.stock-status {
+  margin: 12px 0;
+}
+
+.order-btn {
+  background: #2e7d32;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 30px;
+
+  border-radius: 15px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+/* ORDER POPUP */
+
+.order-popup {
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.order-box {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  width: 330px;
+}
+
+.order-box img {
+  width: 150px;
+}
+
+.close {
+  float: right;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}

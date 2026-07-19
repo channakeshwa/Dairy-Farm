@@ -1,0 +1,807 @@
+/* ==========================================================
+   LAXMI DAIRY FARM - PREMIUM SUBSCRIPTION CSS
+   Clean single-file version
+   ========================================================== */
+
+.subscription-section {
+  padding: 60px 6%;
+  background: linear-gradient(180deg, #f8fbf7, #eef6ee);
+}
+
+.subscription-container {
+  max-width: 1450px;
+  margin: auto;
+}
+
+.subscription-tag {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #e8f6ea;
+  color: #1f6b35;
+  border-radius: 999px;
+  font:
+    700 0.85rem Poppins,
+    sans-serif;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.subscription-title {
+  text-align: center;
+  font:
+    700 3rem "Playfair Display",
+    serif;
+  color: #184f2c;
+  margin-bottom: 12px;
+}
+
+.subscription-subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 42px;
+  color: #666;
+  font:
+    400 1.05rem/1.8 Poppins,
+    sans-serif;
+}
+
+.subscription-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.subscription-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 470px;
+  padding: 26px 24px;
+  border-radius: 28px;
+  overflow: hidden;
+  transition: 0.35s;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.subscription-card.weekly {
+  background: #fff;
+  border: 1px solid #ebebeb;
+}
+
+.subscription-card.monthly {
+  background: linear-gradient(180deg, #2d8b4b, #1e6c38);
+  color: #fff;
+}
+
+.subscription-card.yearly {
+  background: linear-gradient(180deg, #202020, #111);
+  color: #fff;
+}
+
+.plan-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #ffd34d;
+  color: #222;
+  font:
+    700 0.72rem Poppins,
+    sans-serif;
+}
+
+.subscription-image {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 10px 0 16px;
+  background: #fff;
+  padding: 5px;
+}
+
+.subscription-card h3 {
+  font:
+    700 1.8rem Poppins,
+    sans-serif;
+  margin: 8px 0;
+}
+
+.subscription-price {
+  font:
+    800 3rem Poppins,
+    sans-serif;
+  color: #24853d;
+}
+
+.subscription-card.monthly .subscription-price,
+.subscription-card.yearly .subscription-price {
+  color: #ffd34d;
+}
+
+.subscription-duration {
+  margin: 6px 0 18px;
+  opacity: 0.8;
+}
+
+.subscription-features {
+  list-style: none;
+  width: 100%;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.subscription-features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  font:
+    500 0.95rem Poppins,
+    sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.subscription-card.monthly .subscription-features li,
+.subscription-card.yearly .subscription-features li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.subscription-features i {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8f6ea;
+  color: #24853d;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+.subscription-card.monthly .subscription-features i,
+.subscription-card.yearly .subscription-features i {
+  background: #ffd34d;
+  color: #111;
+}
+
+.subscribe-btn {
+  margin-top: auto;
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 999px;
+  font:
+    700 0.95rem Poppins,
+    sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.subscription-card.weekly .subscribe-btn {
+  background: #fff;
+  border: 2px solid #24853d;
+  color: #24853d;
+}
+
+.subscription-card.monthly .subscribe-btn {
+  background: #ffd34d;
+  color: #111;
+}
+
+.subscription-card.yearly .subscribe-btn {
+  background: transparent;
+  border: 2px solid #ffd34d;
+  color: #ffd34d;
+}
+
+.subscription-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 992px) {
+  .subscription-grid {
+    grid-template-columns: 1fr;
+  }
+  .subscription-card {
+    min-height: auto;
+  }
+  .subscription-title {
+    font-size: 2.4rem;
+  }
+}
+/*==========================================================
+        FINAL PREMIUM POLISH - APPLE STYLE
+==========================================================*/
+
+/* Premium Glass Card */
+.subscription-card {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* Soft Glow */
+
+.subscription-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.08)
+  );
+
+  opacity: 0.7;
+}
+
+/* Premium Hover */
+
+.subscription-card:hover {
+  transform: translateY(-14px) scale(1.02);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 35px 80px rgba(34, 139, 34, 0.15);
+}
+
+/* Image Animation */
+
+.subscription-image {
+  transition: 0.45s ease;
+}
+
+.subscription-card:hover .subscription-image {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* Heading */
+
+.subscription-card h3 {
+  letter-spacing: 0.5px;
+}
+
+/* Price */
+
+.subscription-price {
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Feature Hover */
+
+.subscription-features li {
+  transition: 0.3s ease;
+}
+
+.subscription-features li:hover {
+  transform: translateX(6px);
+}
+
+/* Premium Button */
+
+.subscribe-btn {
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.subscribe-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.subscribe-btn:hover::before {
+  left: 120%;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-3px);
+
+  letter-spacing: 0.4px;
+}
+
+/* Badge */
+
+.plan-badge {
+  box-shadow: 0 8px 20px rgba(255, 211, 77, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+/*==========================================================
+        FINAL PREMIUM POLISH - APPLE STYLE
+==========================================================*/
+
+/* Premium Glass Card */
+.subscription-card {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* Soft Glow */
+
+.subscription-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.08)
+  );
+
+  opacity: 0.7;
+}
+
+/* Premium Hover */
+
+.subscription-card:hover {
+  transform: translateY(-14px) scale(1.02);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 35px 80px rgba(34, 139, 34, 0.15);
+}
+
+/* Image Animation */
+
+.subscription-image {
+  transition: 0.45s ease;
+}
+
+.subscription-card:hover .subscription-image {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* Heading */
+
+.subscription-card h3 {
+  letter-spacing: 0.5px;
+}
+
+/* Price */
+
+.subscription-price {
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Feature Hover */
+
+.subscription-features li {
+  transition: 0.3s ease;
+}
+
+.subscription-features li:hover {
+  transform: translateX(6px);
+}
+
+/* Premium Button */
+
+.subscribe-btn {
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.subscribe-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.subscribe-btn:hover::before {
+  left: 120%;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-3px);
+
+  letter-spacing: 0.4px;
+}
+
+/* Badge */
+
+.plan-badge {
+  box-shadow: 0 8px 20px rgba(255, 211, 77, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+/*==========================================================
+        FINAL PREMIUM POLISH - APPLE STYLE
+==========================================================*/
+
+/* Premium Glass Card */
+.subscription-card {
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* Soft Glow */
+
+.subscription-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    transparent 40%,
+    transparent 60%,
+    rgba(255, 255, 255, 0.08)
+  );
+
+  opacity: 0.7;
+}
+
+/* Premium Hover */
+
+.subscription-card:hover {
+  transform: translateY(-14px) scale(1.02);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    0 35px 80px rgba(34, 139, 34, 0.15);
+}
+
+/* Image Animation */
+
+.subscription-image {
+  transition: 0.45s ease;
+}
+
+.subscription-card:hover .subscription-image {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* Heading */
+
+.subscription-card h3 {
+  letter-spacing: 0.5px;
+}
+
+/* Price */
+
+.subscription-price {
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Feature Hover */
+
+.subscription-features li {
+  transition: 0.3s ease;
+}
+
+.subscription-features li:hover {
+  transform: translateX(6px);
+}
+
+/* Premium Button */
+
+.subscribe-btn {
+  position: relative;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.subscribe-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.subscribe-btn:hover::before {
+  left: 120%;
+}
+
+.subscribe-btn:hover {
+  transform: translateY(-3px);
+
+  letter-spacing: 0.4px;
+}
+
+/* Badge */
+
+.plan-badge {
+  box-shadow: 0 8px 20px rgba(255, 211, 77, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+/*==========================================================
+        NEXT LEVEL LUXURY EDITION
+==========================================================*/
+
+/* Premium Card */
+
+.subscription-card {
+  isolation: isolate;
+
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+/* Glass Reflection */
+
+.subscription-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    transparent 35%,
+    transparent 65%,
+    rgba(255, 255, 255, 0.08)
+  );
+
+  opacity: 0.9;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* Animated Border */
+
+.subscription-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -1px;
+
+  border-radius: inherit;
+
+  padding: 1px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.45),
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 215, 0, 0.18),
+    rgba(46, 139, 87, 0.18)
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* Hover */
+
+.subscription-card:hover {
+  transform: translateY(-18px) scale(1.025) rotateX(2deg);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.18),
+    0 10px 30px rgba(46, 139, 87, 0.18);
+}
+
+/* Featured */
+
+.subscription-card.monthly {
+  transform: translateY(-14px);
+}
+
+.subscription-card.monthly:hover {
+  transform: translateY(-28px) scale(1.04);
+}
+
+/* Premium Image */
+
+.subscription-image {
+  transition: 0.5s;
+
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
+
+.subscription-card:hover .subscription-image {
+  transform: scale(1.12) rotate(-6deg);
+}
+
+/* Premium Price */
+
+.subscription-price {
+  background: linear-gradient(180deg, #ffd95a, #ffb700);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: none;
+}
+
+/* Weekly Card Price */
+
+.subscription-card.weekly .subscription-price {
+  background: linear-gradient(180deg, #2ca84b, #16652b);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+/* Feature Hover */
+
+.subscription-features li {
+  transition: 0.35s;
+}
+
+.subscription-features li:hover {
+  transform: translateX(8px);
+
+  letter-spacing: 0.3px;
+}
+
+/* Button */
+
+.subscribe-btn {
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.subscribe-btn:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+}
+
+/* Floating Badge */
+
+.plan-badge {
+  animation: premiumFloat 3s ease-in-out infinite;
+}
+
+@keyframes premiumFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Card Entrance */
+
+.subscription-card {
+  animation: premiumAppear 0.9s ease both;
+}
+
+.subscription-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.subscription-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes premiumAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}

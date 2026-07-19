@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Laxmi Dairy Farm | Shop</title>
+
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+
+  <body>
+    <!-- CUSTOMER HEADER -->
+
+    <div class="header">
+      <div>
+        <h1>🥛 Laxmi Dairy Farm</h1>
+
+        <p>Fresh Milk • Pure Quality • Daily Delivery</p>
+      </div>
+
+      <img src="logo.jpeg" class="header-logo" />
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+      <input type="text" id="search" placeholder="🔍 Search Products" />
+    </div>
+
+    <h2 class="section-title">Fresh Dairy Products</h2>
+
+    <!-- PRODUCTS -->
+
+    <div id="shopProducts" class="product-container"></div>
+
+    <!-- ORDER POPUP SAME DESIGN -->
+
+    <div id="orderPopup" class="order-popup">
+      <div class="order-box">
+        <span onclick="closeOrderPopup()" class="close"> × </span>
+
+        <img id="orderProductImage" />
+
+        <h2 id="orderProductName"></h2>
+
+        <p>
+          ₹<span id="orderProductPrice"></span>
+          /
+          <span id="orderProductUnit"></span>
+        </p>
+
+        <div>
+          <button onclick="decreaseQty()">-</button>
+
+          <span id="orderQuantity">1</span>
+
+          <button onclick="increaseQty()">+</button>
+        </div>
+
+        <h3>
+          Total ₹
+          <span id="orderTotal"></span>
+        </h3>
+
+        <button id="continueBtn">Continue</button>
+      </div>
+    </div>
+
+    <script src="js/shop.js"></script>
+  </body>
+</html>

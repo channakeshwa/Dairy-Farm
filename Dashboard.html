@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laxmi Dairy Farm</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-header">
+      <div class="header-top">
+        <div class="profile">
+          <img src="logo.jpeg" class="logo" />
+
+          <div>
+            <p class="welcome" id="greeting"></p>
+
+            <p class="today-date" id="todayDate"></p>
+            <h2>Laxmi Dairy Farm</h2>
+
+            <span>Dairy Management System</span>
+            <button onclick="logout()" class="logout-btn">🚪 Logout</button>
+          </div>
+        </div>
+
+        <div class="notification" onclick="showNotifications()">
+          <span class="bell">🔔</span>
+
+          <span id="notificationCount">0</span>
+        </div>
+        <div id="notificationBox" class="notification-box"></div>
+      </div>
+      <div class="search">
+        <input
+          type="text"
+          id="dashboardSearch"
+          placeholder="Search products, customer..."
+        />
+      </div>
+      <div id="searchResults"></div>
+    </div>
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-icon">📦</div>
+
+        <h2 id="totalProducts">0</h2>
+
+        <p>Total Products</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🟢</div>
+
+        <h2 id="inStock">0</h2>
+
+        <p>In Stock</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🟡</div>
+
+        <h2 id="lowStock">0</h2>
+
+        <p>Low Stock</p>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🔴</div>
+
+        <h2 id="outStock">0</h2>
+
+        <p>Out Of Stock</p>
+      </div>
+    </div>
+    <div class="business-card">
+      <div class="business-header">
+        <div>
+          <p class="business-title">Today's Business</p>
+
+          <h1 id="todayRevenue">₹0</h1>
+
+          <span class="growth"> 📈 Live Dashboard </span>
+        </div>
+
+        <div class="wallet-icon">💰</div>
+      </div>
+
+      <div class="business-details">
+        <div>
+          <h3 id="dashboardProducts">0</h3>
+
+          <p>Products</p>
+        </div>
+
+        <div>
+          <h3 id="dashboardInStock">0</h3>
+
+          <p>In Stock</p>
+        </div>
+
+        <div>
+          <h3 id="dashboardLowStock">0</h3>
+
+          <p>Low Stock</p>
+        </div>
+      </div>
+    </div>
+    <div class="alert-section">
+      <div class="section-header">
+        <h2>⚠ Low Stock Alerts</h2>
+      </div>
+
+      <div id="lowStockContainer"></div>
+    </div>
+    <div class="recent-products">
+      <div class="section-header">
+        <h2>📦 Recent Products</h2>
+
+        <span class="view-all" onclick="location.href = 'products.html'">
+          View All →
+        </span>
+      </div>
+
+      <div id="recentProducts"></div>
+    </div>
+    <div class="quick-actions">
+      <div class="section-header">
+        <h2>⚡ Quick Actions</h2>
+      </div>
+
+      <div class="quick-grid">
+        <div class="quick-card" onclick="location.href = 'products.html'">
+          <div class="quick-icon">📦</div>
+
+          <h3>Products</h3>
+        </div>
+
+        <div class="quick-card" onclick="location.href = 'customer.html'">
+          <div class="quick-icon">👥</div>
+
+          <h3>Customer</h3>
+        </div>
+
+        <div class="quick-card" onclick="location.href = 'orders.html'">
+          <div class="quick-icon">🛒</div>
+
+          <h3>Orders</h3>
+        </div>
+
+        <div class="quick-card" onclick="location.href = 'reports.html'">
+          <div class="quick-icon">📊</div>
+
+          <h3>Reports</h3>
+        </div>
+      </div>
+    </div>
+    <div class="analytics-section">
+      <div class="section-header">
+        <h2>📊 Product Analytics</h2>
+      </div>
+
+      <div class="analytics-card">
+        <div class="analytics-row">
+          <span>🥛 Milk</span>
+
+          <span id="milkCount">0</span>
+        </div>
+
+        <div class="analytics-row">
+          <span>🧈 Butter</span>
+
+          <span id="butterCount">0</span>
+        </div>
+
+        <div class="analytics-row">
+          <span>🥣 Curd</span>
+
+          <span id="curdCount">0</span>
+        </div>
+
+        <div class="analytics-row">
+          <span>🧀 Ghee</span>
+
+          <span id="gheeCount">0</span>
+        </div>
+      </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

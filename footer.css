@@ -1,0 +1,882 @@
+/*==========================================================
+                LAXMI DAIRY FARM
+                PREMIUM FOOTER V2
+                    PART - 1
+==========================================================*/
+
+/*================ GOOGLE FONT ================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/*================ FOOTER ROOT ================*/
+
+.premium-footer {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #06281b;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  margin-top: 90px;
+}
+
+/*================ TOP WHITE AREA ================*/
+
+.footer-top {
+  position: relative;
+
+  height: 165px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+/*================ FARM IMAGE ================*/
+
+.footer-bg {
+  position: absolute;
+
+  inset: 0;
+
+  background: url("farm.jpeg") center/cover no-repeat;
+
+  opacity: 0.14;
+}
+
+/*================ TITLE ================*/
+
+.footer-heading {
+  position: relative;
+
+  z-index: 5;
+
+  text-align: center;
+
+  padding-top: 32px;
+
+  font-size: 44px;
+
+  font-weight: 700;
+
+  color: #0b3d2e;
+
+  letter-spacing: 0.5px;
+}
+
+/*================ SVG WAVE ================*/
+
+.footer-wave {
+  position: absolute;
+
+  left: 0;
+
+  top: 105px;
+
+  width: 100%;
+
+  line-height: 0;
+
+  z-index: 3;
+}
+
+.footer-wave svg {
+  display: block;
+
+  width: 100%;
+
+  height: 120px;
+}
+
+.footer-wave path {
+  fill: #06281b;
+
+  stroke: #d4af37;
+
+  stroke-width: 4;
+}
+
+/*================ GOLD GLOW ================*/
+
+.footer-wave::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 10px;
+
+  width: 100%;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #fff7c2,
+    #d4af37,
+    transparent
+  );
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.8),
+    0 0 18px rgba(212, 175, 55, 0.45);
+}
+
+/*================ FLOATING LOGO ================*/
+
+.footer-floating-logo {
+  position: absolute;
+
+  left: 50%;
+
+  top: 88px;
+
+  transform: translateX(-50%);
+
+  z-index: 20;
+}
+
+.logo-circle {
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: #06281b;
+
+  border: 3px solid #d4af37;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  box-shadow:
+    0 0 15px rgba(212, 175, 55, 0.45),
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.logo-circle img {
+  width: 58px;
+}
+
+/*================ GOLD DIVIDER ================*/
+
+.gold-line {
+  width: 100%;
+
+  height: 2px;
+
+  background: #d4af37;
+
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+}
+/*==========================================================
+            PREMIUM FOOTER V2
+                 PART - 2
+==========================================================*/
+
+/*================ MAIN CONTENT =================*/
+
+.footer-content {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1350px;
+
+  margin: auto;
+
+  padding: 60px 45px 8px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1.15fr 0.85fr 0.85fr;
+
+  gap: 28px;
+
+  align-items: start;
+}
+
+/*================ COLUMN =================*/
+
+.footer-column {
+  min-width: 0;
+}
+
+/*================ VERTICAL DIVIDER =================*/
+
+.footer-column:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding-right: 28px;
+}
+
+/*================ HEADING =================*/
+
+.footer-column h3 {
+  position: relative;
+
+  margin-bottom: 24px;
+
+  color: #d4af37;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.footer-column h3::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 48px;
+
+  height: 3px;
+
+  border-radius: 20px;
+
+  background: #59c55d;
+}
+
+/*================ COMPANY =================*/
+
+.company-column {
+  text-align: center;
+}
+
+.company-logo {
+  width: 90px;
+
+  display: block;
+
+  margin: auto;
+
+  margin-bottom: 12px;
+}
+
+.company-column h2 {
+  font-size: 36px;
+
+  color: #d4af37;
+
+  line-height: 1;
+
+  letter-spacing: 2px;
+
+  font-weight: 700;
+}
+
+.company-column h4 {
+  font-size: 15px;
+
+  color: #ffffff;
+
+  margin-top: 8px;
+
+  letter-spacing: 4px;
+
+  font-weight: 500;
+}
+
+.company-tagline {
+  margin-top: 16px;
+
+  color: #f2f2f2;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.quote-box {
+  margin-top: 18px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid rgba(212, 175, 55, 0.28);
+}
+
+.quote-box p {
+  font-size: 16px;
+
+  color: #ececec;
+
+  line-height: 1.7;
+
+  font-style: italic;
+}
+/*==========================================================
+            PREMIUM FOOTER V2
+                 PART - 3
+==========================================================*/
+
+/*================ CONTACT LIST ================*/
+
+.contact-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+/*================ CONTACT CARD ================*/
+
+.contact-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 10px 14px;
+
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  border: 1px solid rgba(212, 175, 55, 0.18);
+
+  transition: 0.35s;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #d4af37;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25),
+    0 0 15px rgba(212, 175, 55, 0.18);
+}
+
+/*================ ICON =================*/
+
+.contact-card i {
+  width: 42px;
+
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 17px;
+
+  color: #ffffff;
+}
+
+/*================ ICON COLORS =================*/
+
+.contact-card:nth-child(1) i {
+  background: #27ae60;
+}
+
+.contact-card:nth-child(2) i {
+  background: #d4af37;
+
+  color: #06281b;
+}
+
+.contact-card:nth-child(3) i {
+  background: #25d366;
+}
+
+.contact-card:nth-child(4) i {
+  background: #ffb300;
+
+  color: #06281b;
+}
+
+/*================ TEXT =================*/
+
+.contact-card h5 {
+  font-size: 15px;
+
+  margin-bottom: 3px;
+
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+.contact-card span {
+  font-size: 13px;
+
+  color: #d8d8d8;
+
+  line-height: 1.4;
+}
+
+/*==================================================
+                QUICK LINKS
+==================================================*/
+
+.footer-links {
+  list-style: none;
+
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-links a {
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+
+  padding-left: 8px;
+}
+/*==========================================================
+            PREMIUM FOOTER V2
+                 PART - 4
+==========================================================*/
+
+/*================ SOCIAL ROW ================*/
+
+.social-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin: 15px 0 22px;
+
+  gap: 10px;
+}
+
+/*================ SOCIAL ICON =================*/
+
+.social-row a {
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  font-size: 20px;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  transition: 0.35s ease;
+}
+
+/*================ ICON COLORS =================*/
+
+.social-row a:nth-child(1) {
+  color: #25d366;
+}
+
+.social-row a:nth-child(2) {
+  color: #e4405f;
+}
+
+.social-row a:nth-child(3) {
+  color: #ff0000;
+}
+
+.social-row a:nth-child(4) {
+  color: #d4af37;
+}
+
+/*================ HOVER =================*/
+
+.social-row a:hover {
+  transform: translateY(-4px) scale(1.08);
+
+  border-color: #d4af37;
+
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+/*================ LOVE CARD =================*/
+
+.love-card {
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border: 1px solid rgba(212, 175, 55, 0.18);
+
+  text-align: center;
+}
+
+/*================ LOVE HEADING =================*/
+
+.love-card h4 {
+  color: #d4af37;
+
+  font-size: 20px;
+
+  margin-bottom: 10px;
+
+  font-weight: 600;
+}
+
+/*================ LOVE TEXT =================*/
+
+.love-card p {
+  color: #ececec;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/*==========================================================
+            PREMIUM FOOTER V2
+                 PART - 5
+==========================================================*/
+
+/*================ DEVELOPER SECTION ================*/
+
+.developer-section {
+  max-width: 1350px;
+
+  margin: 8px auto 18px;
+
+  padding: 16px 28px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 25px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(212, 175, 55, 0.18);
+
+  border-radius: 20px;
+}
+
+/*================ LEFT SIDE ================*/
+
+.developer-left {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.developer-image {
+  width: 85px;
+
+  height: 85px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 3px solid #d4af37;
+}
+
+.developer-left p {
+  font-size: 13px;
+
+  color: #dddddd;
+
+  margin-bottom: 4px;
+}
+
+.developer-left h2 {
+  font-size: 26px;
+
+  color: #d4af37;
+
+  margin-bottom: 4px;
+}
+
+.developer-left span {
+  font-size: 14px;
+
+  color: #cccccc;
+}
+
+/*================ RIGHT SIDE ================*/
+
+.developer-right {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+/*================ SKILL BOX ================*/
+
+.skill-box {
+  text-align: center;
+}
+
+.skill-box i {
+  width: 46px;
+
+  height: 46px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  margin: auto;
+
+  color: #8ee65a;
+
+  border: 2px solid rgba(142, 230, 90, 0.35);
+
+  font-size: 18px;
+}
+
+.skill-box h5 {
+  margin-top: 8px;
+
+  font-size: 13px;
+
+  color: #ffffff;
+}
+
+/*================ COPYRIGHT ================*/
+
+.footer-bottom {
+  margin-top: 10px;
+
+  text-align: center;
+
+  padding: 10px 20px 15px;
+}
+
+.bottom-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin-bottom: 15px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #fff5c4,
+    #d4af37,
+    transparent
+  );
+}
+
+.footer-bottom p {
+  font-size: 14px;
+
+  color: #dddddd;
+}
+.premium-footer::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -40%;
+
+  width: 40%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    rgba(212, 175, 55, 0.18),
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+
+  animation: footerShine 8s linear infinite;
+}
+
+@keyframes footerShine {
+  from {
+    left: -50%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+.logo-circle {
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.company-logo {
+  transition: 0.5s;
+}
+
+.company-logo:hover {
+  transform: scale(1.06);
+
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.7));
+}
+.footer-column h3 {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.18);
+}
+.contact-card {
+  overflow: hidden;
+
+  position: relative;
+}
+
+.contact-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: -120%;
+
+  top: 0;
+
+  width: 60%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+}
+
+.contact-card:hover::before {
+  animation: cardShine 0.8s;
+}
+
+@keyframes cardShine {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 180%;
+  }
+}
+.social-row a {
+  animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.45);
+  }
+}
+.footer-column h3::after {
+  animation: lineMove 3s infinite;
+}
+
+@keyframes lineMove {
+  0%,
+  100% {
+    width: 45px;
+  }
+
+  50% {
+    width: 70px;
+  }
+}
+.developer-section:hover {
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(212, 175, 55, 0.18);
+}
+.bottom-line {
+  background-size: 300%;
+
+  animation: goldMove 5s linear infinite;
+}
+
+@keyframes goldMove {
+  from {
+    background-position: 0%;
+  }
+
+  to {
+    background-position: 300%;
+  }
+}

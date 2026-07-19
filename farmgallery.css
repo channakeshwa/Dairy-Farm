@@ -1,0 +1,472 @@
+/*==========================================================
+                PREMIUM FARM GALLERY
+==========================================================*/
+
+.gallery {
+  position: relative;
+  padding: 120px 8%;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fff9 100%);
+}
+
+/*================ BACKGROUND GLOW ================*/
+
+.gallery::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: rgba(34, 197, 94, 0.08);
+  border-radius: 50%;
+  filter: blur(130px);
+  top: -120px;
+  left: -120px;
+}
+
+.gallery::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: 50%;
+  filter: blur(130px);
+  bottom: -140px;
+  right: -120px;
+}
+
+/*================ HEADING ================*/
+
+.gallery-header {
+  text-align: center;
+
+  max-width: 820px;
+
+  margin: 0 auto 70px;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.gallery-tag {
+  display: inline-block;
+
+  padding: 10px 28px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  backdrop-filter: blur(18px);
+
+  color: #15803d;
+
+  letter-spacing: 3px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  text-transform: uppercase;
+}
+
+.gallery-header h2 {
+  font-size: 58px;
+
+  color: #143126;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  line-height: 1.2;
+}
+
+.gallery-header p {
+  font-size: 18px;
+
+  color: #666;
+
+  line-height: 1.9;
+}
+
+/*================ PREMIUM SLIDER FRAME ================*/
+
+.gallery-slider {
+  position: relative;
+
+  max-width: 1300px;
+
+  margin: auto;
+
+  padding: 25px;
+
+  border-radius: 35px;
+
+  background: rgba(255, 255, 255, 0.62);
+
+  backdrop-filter: blur(25px);
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  z-index: 5;
+}
+
+/*================ IMAGE AREA ================*/
+
+.gallery-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 650px;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  background: #eef6ef;
+}
+/*==========================================================
+            GALLERY SLIDES
+==========================================================*/
+
+.gallery-slide {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform: scale(1.08);
+
+  transition:
+    opacity 0.8s ease,
+    transform 6s ease;
+}
+
+.gallery-slide.active {
+  opacity: 1;
+
+  transform: scale(1);
+
+  z-index: 2;
+}
+
+/*==========================================================
+            NAVIGATION BUTTONS
+==========================================================*/
+
+.gallery-btn {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 58px;
+  height: 58px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(15px);
+
+  color: #15803d;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: 0.35s ease;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-btn:hover {
+  background: #15803d;
+
+  color: #fff;
+
+  transform: translateY(-50%) scale(1.08);
+
+  box-shadow: 0 18px 35px rgba(21, 128, 61, 0.35);
+}
+
+.gallery-btn.prev {
+  left: 18px;
+}
+
+.gallery-btn.next {
+  right: 18px;
+}
+
+/*==========================================================
+                NAVIGATION DOTS
+==========================================================*/
+
+.gallery-dots {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+.gallery-dots .dot {
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: #d7d7d7;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+}
+
+.gallery-dots .dot.active {
+  width: 36px;
+
+  border-radius: 30px;
+
+  background: #15803d;
+
+  box-shadow: 0 0 18px rgba(21, 128, 61, 0.45);
+}
+
+.gallery-dots .dot:hover {
+  background: #1d9d50;
+}
+
+/*==========================================================
+                FRAME HOVER
+==========================================================*/
+
+.gallery-slider {
+  transition: 0.45s ease;
+}
+
+.gallery-slider:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.12),
+    0 0 45px rgba(21, 128, 61, 0.12);
+}
+/*==========================================================
+                RESPONSIVE GALLERY
+==========================================================*/
+
+@media (max-width: 992px) {
+  .gallery {
+    padding: 90px 6%;
+  }
+
+  .gallery-header h2 {
+    font-size: 42px;
+  }
+
+  .gallery-wrapper {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 70px 5%;
+  }
+
+  .gallery-header h2 {
+    font-size: 34px;
+  }
+
+  .gallery-header p {
+    font-size: 16px;
+  }
+
+  .gallery-wrapper {
+    height: 350px;
+  }
+
+  .gallery-btn {
+    width: 48px;
+    height: 48px;
+
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-header h2 {
+    font-size: 28px;
+  }
+
+  .gallery-header p {
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  .gallery-wrapper {
+    height: 260px;
+  }
+
+  .gallery-slider {
+    padding: 15px;
+
+    border-radius: 22px;
+  }
+
+  .gallery-wrapper {
+    border-radius: 18px;
+  }
+}
+/*==========================================================
+            PREMIUM LUXURY GALLERY POLISH
+==========================================================*/
+
+/* Luxury Glass Border */
+.gallery-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 35px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(212, 175, 55, 0.35),
+    rgba(34, 197, 94, 0.35),
+    rgba(255, 255, 255, 0.9)
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* Soft Light Reflection */
+.gallery-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 45%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: galleryShine 7s infinite;
+}
+
+@keyframes galleryShine {
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+/* Image Zoom on Hover */
+
+.gallery-slider:hover .gallery-slide.active {
+  transform: scale(1.05);
+}
+
+/* Premium Shadow */
+
+.gallery-slider {
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.08),
+    0 45px 100px rgba(21, 128, 61, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Button Glow */
+
+.gallery-btn {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12),
+    0 0 0 rgba(21, 128, 61, 0);
+}
+
+.gallery-btn:hover {
+  box-shadow:
+    0 20px 40px rgba(21, 128, 61, 0.3),
+    0 0 35px rgba(21, 128, 61, 0.45);
+}
+
+/* Active Dot Animation */
+
+.gallery-dots .dot.active {
+  animation: dotPulse 2s infinite;
+}
+
+@keyframes dotPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(21, 128, 61, 0.45);
+  }
+
+  70% {
+    box-shadow: 0 0 0 12px rgba(21, 128, 61, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(21, 128, 61, 0);
+  }
+}
+
+/* Smooth Lift */
+
+.gallery-slider {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.gallery-slider:hover {
+  transform: translateY(-10px);
+}
