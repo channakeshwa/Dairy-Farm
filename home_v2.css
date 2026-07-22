@@ -408,11 +408,15 @@ translateY (-5px);
     font-size: 18px;
   }
 
-  .navbar {
-    height: 75px;
+.navbar{
 
-    padding: 0 20px;
-  }
+width:95%;
+
+height:70px;
+
+padding:0 15px;
+
+}
 
   .logo-section h2 {
     font-size: 18px;
@@ -425,32 +429,7 @@ translateY (-5px);
   }
 }
 
-@media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 36px;
 
-    line-height: 48px;
-  }
-
-  .hero-content p {
-    font-size: 16px;
-  }
-
-  .primary-btn,
-  .secondary-btn {
-    width: 220px;
-  }
-
-  .navbar {
-    width: 95%;
-
-    top: 12px;
-  }
-
-  .logo-section p {
-    display: none;
-  }
-}
 
 /*======================================
         SEARCH SECTION
@@ -531,7 +510,8 @@ section h2 {
 }
 
 .category-card {
-  width: 370px;
+ width: 100%;
+  max-width: 370px;
 
   height: 520px;
 
@@ -611,7 +591,8 @@ section h2 {
 ======================================*/
 
 .product-card {
-  width: 380px;
+  width: 100%;
+  max-width: 380px;
 
   height: 540px;
 
@@ -992,10 +973,10 @@ section h2 {
 =======================*/
 
 @media (max-width: 1100px) {
-  .about-farm {
-    flex-direction: column-reverse;
-  }
-
+.about-farm {
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
   .about-left {
     text-align: center;
   }
@@ -1014,27 +995,64 @@ section h2 {
     height: 500px;
   }
 }
+@media (max-width:768px){
 
-@media (max-width: 768px) {
-  .about-farm {
-    padding: 80px 6%;
-  }
+.about-farm{
 
-  .about-left h2 {
-    font-size: 34px;
+grid-template-columns:1fr;
 
-    line-height: 45px;
-  }
+padding:70px 20px;
 
-  .about-left p {
-    font-size: 16px;
+gap:40px;
 
-    line-height: 30px;
-  }
+}
 
-  .about-right img {
-    height: 380px;
-  }
+.about-right{
+
+order:-1;
+
+}
+
+.about-right img{
+
+width:100%;
+
+height:auto;
+
+max-height:420px;
+
+min-height:auto;
+
+}
+
+.about-left{
+
+text-align:center;
+
+}
+
+.about-left h2{
+
+font-size:34px;
+
+line-height:44px;
+
+}
+
+.about-left p{
+
+font-size:16px;
+
+line-height:28px;
+
+}
+
+.farm-info{
+
+grid-template-columns:1fr;
+
+}
+
 }
 .product-badge {
   position: absolute;
@@ -1450,4 +1468,66 @@ body {
 
 body.fade-out {
   opacity: 0;
+}
+@media (max-width:768px){
+
+/* Navbar */
+
+.navbar{
+    width:95%;
+    height:70px;
+    padding:0 15px;
+}
+
+.logo-section h2{
+    font-size:18px;
+}
+
+.logo-section p{
+    display:none;
+}
+
+nav{
+    display:none;
+}
+
+.nav-icons button{
+    width:40px;
+    height:40px;
+    font-size:16px;
+}
+
+/* Hero */
+
+.hero{
+    height:85vh;
+    padding:120px 20px 40px;
+}
+
+.hero-content{
+    max-width:100%;
+}
+
+.hero-content h1{
+    font-size:42px;
+    line-height:50px;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:28px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    gap:20px;
+}
+
+.order-btn,
+.secondary-btn{
+    width:100%;
+    max-width:320px;
+    height:58px;
+}
+
 }
