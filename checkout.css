@@ -1,0 +1,412 @@
+/*==========================================================
+                LAXMI DAIRY FARM
+                CHECKOUT PAGE CSS
+==========================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8f8f5;
+  color: #222;
+}
+
+/*================ HEADER ================*/
+
+.checkout-header {
+  width: 100%;
+
+  height: 90px;
+
+  background: #fff;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 60px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+.logo-area {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.logo-area img {
+  width: 65px;
+
+  height: 65px;
+
+  border-radius: 50%;
+}
+
+.logo-area h2 {
+  color: #14532d;
+
+  font-size: 34px;
+
+  font-weight: 700;
+}
+
+.logo-area p {
+  color: #777;
+
+  margin-top: 3px;
+}
+
+.secure {
+  color: #14532d;
+
+  font-weight: 600;
+
+  font-size: 18px;
+}
+
+/*================ PAGE ================*/
+
+.checkout {
+  width: 90%;
+
+  margin: 60px auto;
+
+  display: grid;
+
+  grid-template-columns: 420px 1fr;
+
+  gap: 45px;
+}
+
+/*================ LEFT CARD ================*/
+
+.order-summary {
+  background: #fff;
+
+  border-radius: 30px;
+
+  padding: 35px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+
+  top: 120px;
+}
+
+.order-summary h2 {
+  color: #14532d;
+
+  font-size: 40px;
+
+  margin-bottom: 30px;
+
+  position: relative;
+}
+
+.order-summary h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -12px;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #d4af37;
+
+  border-radius: 20px;
+}
+
+.summary {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 25px;
+
+  font-size: 22px;
+}
+
+.total {
+  margin-top: 35px;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+.order-summary hr {
+  margin-top: 30px;
+
+  border: none;
+
+  border-top: 1px solid #ddd;
+}
+
+/*================ RIGHT CARD ================*/
+
+.delivery-card {
+  background: #fff;
+
+  border-radius: 30px;
+
+  padding: 40px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.delivery-card h2 {
+  color: #14532d;
+
+  font-size: 38px;
+
+  margin-bottom: 35px;
+
+  position: relative;
+}
+
+.delivery-card h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -12px;
+
+  width: 90px;
+
+  height: 4px;
+
+  background: #d4af37;
+
+  border-radius: 20px;
+}
+
+/*================ FORM ================*/
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.delivery-card input {
+  width: 100%;
+
+  height: 58px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 15px;
+
+  padding: 0 18px;
+
+  font-size: 16px;
+
+  margin-bottom: 20px;
+
+  transition: 0.3s;
+}
+
+.delivery-card input:focus {
+  outline: none;
+
+  border-color: #14532d;
+
+  box-shadow: 0 0 10px rgba(20, 83, 45, 0.15);
+}
+
+/*================ PAYMENT ================*/
+
+.delivery-card h3 {
+  margin: 30px 0 20px;
+
+  color: #14532d;
+
+  font-size: 30px;
+}
+
+.payment {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 15px;
+
+  padding: 18px 20px;
+
+  margin-bottom: 18px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.payment:hover {
+  border-color: #14532d;
+
+  background: #f9fff9;
+}
+
+.payment input {
+  width: auto;
+
+  height: auto;
+
+  margin: 0;
+}
+
+/*================ BUTTON ================*/
+
+#placeOrder {
+  width: 100%;
+
+  height: 65px;
+
+  margin-top: 30px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #14532d;
+
+  color: #fff;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+}
+
+#placeOrder:hover {
+  background: #d4af37;
+
+  color: #000;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.35);
+}
+
+/*================ PRODUCTS ================*/
+
+.checkout-product {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.checkout-product img {
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: 15px;
+
+  object-fit: cover;
+}
+
+.checkout-product h4 {
+  font-size: 22px;
+
+  color: #14532d;
+}
+
+.checkout-product p {
+  color: #777;
+
+  margin-top: 5px;
+}
+
+.checkout-price {
+  margin-left: auto;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #14532d;
+}
+
+/*================ MOBILE ================*/
+
+@media (max-width: 991px) {
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-header {
+    flex-direction: column;
+
+    height: auto;
+
+    padding: 20px;
+
+    gap: 15px;
+  }
+
+  .order-summary {
+    position: relative;
+
+    top: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-area h2 {
+    font-size: 26px;
+  }
+
+  .delivery-card {
+    padding: 25px;
+  }
+
+  .order-summary {
+    padding: 25px;
+  }
+}

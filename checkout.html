@@ -1,96 +1,112 @@
 <!doctype html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Laxmi Dairy Farm - Checkout</title>
+    <title>Checkout | Laxmi Dairy Farm</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="checkout.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <div class="checkout-container">
-      <!-- TITLE -->
+    <header class="checkout-header">
+      <div class="logo-area">
+        <img src="logo.jpeg" />
 
-      <h1 class="checkout-title">🛒 Checkout</h1>
+        <div>
+          <h2>Laxmi Dairy Farm</h2>
 
-      <!-- DELIVERY DETAILS -->
+          <p>Fresh • Pure • Healthy</p>
+        </div>
+      </div>
+
+      <div class="secure">🔒 100% Secure Checkout</div>
+    </header>
+
+    <section class="checkout">
+      <!-- LEFT -->
+
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+
+        <div id="checkoutProducts">
+          <!-- Products load here -->
+        </div>
+
+        <hr />
+
+        <div class="summary">
+          <span>Subtotal</span>
+
+          <span id="subTotal">₹0</span>
+        </div>
+
+        <div class="summary total">
+          <span>Total</span>
+
+          <span id="grandTotal">₹0</span>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
 
       <div class="delivery-card">
-        <h2>🚚 Delivery Details</h2>
+        <h2>Delivery Details</h2>
 
-        <div class="delivery-form">
-          <div class="input-box">
-            <span>👤</span>
+        <form>
+          <div class="grid">
+            <input type="text" placeholder="Full Name" />
 
-            <input type="text" id="customerName" placeholder="Full Name" />
+            <input type="tel" placeholder="Phone Number" />
           </div>
 
-          <div class="input-box">
-            <span>📞</span>
+          <input type="text" placeholder="House / Flat / Building" />
 
-            <input
-              type="tel"
-              id="customerPhone"
-              placeholder="Mobile Number"
-              maxlength="10"
-            />
+          <input type="text" placeholder="Area / Street" />
+
+          <div class="grid">
+            <input type="text" placeholder="Landmark" />
+
+            <input type="text" placeholder="Pincode" />
           </div>
 
-          <div class="input-box full">
-            <span>🏠</span>
+          <div class="grid">
+            <input type="text" placeholder="City" />
 
-            <textarea
-              id="customerAddress"
-              placeholder="House No, Street, Area"
-            ></textarea>
+            <input type="text" placeholder="State" />
           </div>
 
-          <div class="input-box">
-            <span>🏙</span>
+          <h3>Payment Method</h3>
 
-            <input type="text" id="customerCity" placeholder="City" />
-          </div>
+          <label class="payment">
+            <input type="radio" checked name="payment" />
 
-          <div class="input-box">
-            <span>📮</span>
+            Cash On Delivery
+          </label>
 
-            <input type="text" id="customerPincode" placeholder="Pincode" />
-          </div>
-        </div>
+          <label class="payment">
+            <input type="radio" name="payment" />
+
+            UPI Payment
+          </label>
+
+          <label class="payment">
+            <input type="radio" name="payment" />
+
+            Online Payment
+          </label>
+
+          <button type="button" id="placeOrder">Place Order</button>
+        </form>
       </div>
-
-      <!-- ORDER SUMMARY -->
-
-      <div class="summary-card">
-        <h2>📦 Order Summary</h2>
-
-        <div class="summary-product">
-          <img id="summaryImage" src="" alt="Product" />
-
-          <div class="summary-info">
-            <h2 id="summaryName"></h2>
-
-            <p id="summaryPrice"></p>
-
-            <p id="summaryQty"></p>
-          </div>
-        </div>
-
-        <div class="summary-total">
-          <span>Total Amount</span>
-
-          <h2 id="summaryTotal"></h2>
-        </div>
-      </div>
-
-      <!-- PLACE ORDER -->
-
-      <button id="placeOrderBtn" class="place-order-btn">✅ Place Order</button>
-    </div>
+    </section>
 
     <script src="js/checkout.js"></script>
   </body>

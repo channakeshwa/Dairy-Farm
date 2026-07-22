@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Your Cart | Laxmi Dairy Farm</title>
+
+    <link rel="stylesheet" href="cart.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="cart-header">
+      <div class="logo-area">
+        <img src="logo.jpeg" alt="Logo" />
+
+        <div>
+          <h2>Laxmi Dairy Farm</h2>
+
+          <p>Fresh • Pure • Healthy</p>
+        </div>
+      </div>
+
+      <a href="index.html" class="back-btn"> ← Continue Shopping </a>
+    </header>
+
+    <section class="cart-page">
+      <div class="cart-left">
+        <h1>Your Cart</h1>
+
+        <div id="cartItems">
+          <!-- Products will appear here -->
+        </div>
+      </div>
+
+      <div class="cart-right">
+        <div class="summary-card">
+          <h2>Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+
+            <span id="subtotal">₹0</span>
+          </div>
+
+          <hr />
+
+          <div class="summary-row total">
+            <span>Total</span>
+
+            <span id="total">₹0</span>
+          </div>
+
+          <button id="checkoutBtn" onclick="goToCheckout()">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/cart.js"></script>
+  </body>
+</html>

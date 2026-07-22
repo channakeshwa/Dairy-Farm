@@ -112,3 +112,6 @@ setInterval(nextSlide, 4000);
 /* Initial */
 
 showSlide(currentSlide);
+function openCartPage() {
+  window.location.href = "cart.html";
+}

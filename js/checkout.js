@@ -1,160 +1,146 @@
-// ==========================
-// Load Current Order
-// ==========================
+/*==========================================================
+            LAXMI DAIRY FARM
+              CHECKOUT PAGE
+==========================================================*/
 
-const currentOrder = JSON.parse(localStorage.getItem("currentOrder"));
+const checkoutProducts = document.getElementById("checkoutProducts");
+const subTotal = document.getElementById("subTotal");
+const grandTotal = document.getElementById("grandTotal");
 
-if (!currentOrder) {
-  alert("No order found!");
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  window.location.href = "products.html";
-}
+loadCheckout();
 
-// Product Details
-document.getElementById("summaryImage").src = currentOrder.product.image;
+function loadCheckout() {
+  checkoutProducts.innerHTML = "";
 
-document.getElementById("summaryName").innerText = currentOrder.product.name;
+  let total = 0;
 
-document.getElementById("summaryPrice").innerText =
-  `₹${currentOrder.product.price} / ${currentOrder.product.unit}`;
+  if (cart.length === 0) {
+    checkoutProducts.innerHTML = `
+            <h3 style="text-align:center;color:#777;padding:40px;">
+                Your cart is empty
+            </h3>
+        `;
 
-document.getElementById("summaryQty").innerText =
-  `Quantity : ${currentOrder.quantity}`;
+    subTotal.innerHTML = "₹0";
+    grandTotal.innerHTML = "₹0";
 
-document.getElementById("summaryTotal").innerText = `₹${currentOrder.total}`;
-// ==========================
-// Place Order
-// ==========================
-
-document.getElementById("placeOrderBtn").addEventListener("click", placeOrder);
-
-function placeOrder() {
-  const name = document.getElementById("customerName").value.trim();
-  const phone = document.getElementById("customerPhone").value.trim();
-  const address = document.getElementById("customerAddress").value.trim();
-  const city = document.getElementById("customerCity").value.trim();
-  const pincode = document.getElementById("customerPincode").value.trim();
-
-  // Validation
-
-  if (name === "") {
-    alert("Please enter customer name.");
     return;
   }
 
-  if (!/^[0-9]{10}$/.test(phone)) {
-    alert("Enter a valid 10-digit mobile number.");
-    return;
-  }
+  cart.forEach((product) => {
+    if (product.qty > 0) {
+      total += product.price * product.qty;
 
-  if (address === "") {
-    alert("Please enter delivery address.");
-    return;
-  }
+      checkoutProducts.innerHTML += `
 
-  if (city === "") {
-    alert("Please enter city.");
-    return;
-  }
+            <div class="checkout-product">
 
-  if (!/^[0-9]{6}$/.test(pincode)) {
-    alert("Enter a valid 6-digit pincode.");
-    return;
-  }
+                <img src="${product.image}" alt="${product.name}">
 
-  // Get existing orders
-  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+                <div>
 
-  // Create new order
-  const newOrder = {
-    id: Date.now(),
+                    <h4>${product.name}</h4>
 
-    customer: {
-      name,
-      phone,
-      address,
-      city,
-      pincode,
-    },
+                    <p>${product.unit}</p>
 
-    product: currentOrder.product,
+                    <p>Qty : ${product.qty}</p>
 
-    quantity: currentOrder.quantity,
+                </div>
 
-    total: currentOrder.total,
+                <div class="checkout-price">
 
-    status: "Pending",
+                    ₹${product.price * product.qty}
 
-    orderDate: new Date().toLocaleString(),
-  };
+                </div>
 
-  // Save order
-  orders.push(newOrder);
+            </div>
 
-  // ==========================
-  // Admin Notification
-  // ==========================
-  // ==========================
-  // Save Order For Admin
-  // ==========================
-
-
-  orders.push(newOrder);
-
-  localStorage.setItem("orders", JSON.stringify(orders));
-
-  let notifications = JSON.parse(localStorage.getItem("notifications")) || [];
-
-  notifications.push({
-    message: "🛒 New Order Received",
-
-    product: newOrder.product.name,
-
-    quantity: newOrder.quantity,
-
-    unit: newOrder.product.unit,
-
-    amount: newOrder.total,
-
-    customer: newOrder.customer.name,
-
-    phone: newOrder.customer.phone,
-
-    address: newOrder.customer.address,
-
-    city: newOrder.customer.city,
-
-    pincode: newOrder.customer.pincode,
-
-    time: newOrder.orderDate,
-
-    seen: false,
+            `;
+    }
   });
 
-  localStorage.setItem("notifications", JSON.stringify(notifications));
-  localStorage.removeItem("currentOrder");
-
-  // Success message
-  alert("🎉 Order Placed Successfully!");
-
-  // Redirect to Orders page
-  window.location.href = "shop.html";
-
-  // Reduce Stock
-
-  let products = JSON.parse(localStorage.getItem("products")) || [];
-
-  const productIndex = products.findIndex(
-    (p) =>
-      p.name === currentOrder.product.name &&
-      p.category === currentOrder.product.category,
-  );
-
-  if (productIndex !== -1) {
-    products[productIndex].stock =
-      Number(products[productIndex].stock) - currentOrder.quantity;
-
-    localStorage.setItem("products", JSON.stringify(products));
-  }
-  alert("🎉 Order Saved Successfully!");
+  subTotal.innerHTML = "₹" + total;
+  grandTotal.innerHTML = "₹" + total;
 }
+
+/*==============================
+        PLACE ORDER
+==============================*/
+
+const placeOrder = document.getElementById("placeOrder");
+
+placeOrder.addEventListener("click", () => {
+  const name = document
+    .querySelector("input[placeholder='Full Name']")
+    .value.trim();
+
+  const phone = document
+    .querySelector("input[placeholder='Phone Number']")
+    .value.trim();
+
+  const house = document
+    .querySelector("input[placeholder='House / Flat / Building']")
+    .value.trim();
+
+  const area = document
+    .querySelector("input[placeholder='Area / Street']")
+    .value.trim();
+
+  const pincode = document
+    .querySelector("input[placeholder='Pincode']")
+    .value.trim();
+
+  const city = document.querySelector("input[placeholder='City']").value.trim();
+
+  const state = document
+    .querySelector("input[placeholder='State']")
+    .value.trim();
+
+  if (
+    name === "" ||
+    phone === "" ||
+    house === "" ||
+    area === "" ||
+    pincode === "" ||
+    city === "" ||
+    state === ""
+  ) {
+    alert("Please fill all the delivery details.");
+
+    return;
+  }
+
+  const order = {
+    customer: {
+      name,
+
+      phone,
+
+      house,
+
+      area,
+
+      pincode,
+
+      city,
+
+      state,
+    },
+
+    products: cart,
+
+    total: grandTotal.innerText,
+
+    date: new Date().toLocaleString(),
+
+    orderId: "LDF" + Math.floor(Math.random() * 100000),
+  };
+
+  localStorage.setItem("order", JSON.stringify(order));
+
+  localStorage.removeItem("cart");
+
+  window.location.href = "success.html";
+});

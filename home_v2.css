@@ -248,69 +248,118 @@ nav a:hover::after {
   margin-bottom: 45px;
 }
 
-/* buttons */
+/*==============================
+        HERO BUTTONS
+==============================*/
 
-.hero-buttons {
-  display: flex;
-
-  justify-content: center;
-
-  gap: 20px;
-
-  flex-wrap: wrap;
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    margin-top:50px;
 }
 
-.primary-btn {
-  padding: 18px 42px;
+/* ORDER BUTTON */
 
-  border: none;
+.order-btn{
 
-  border-radius: 50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
 
-  background: #2e7d32;
+    width:220px;
+    height:65px;
 
-  color: white;
+    background:linear-gradient(135deg,#16a34a,#14532d);
 
-  font-size: 18px;
+    color:#fff;
 
-  cursor: pointer;
+    border:none;
 
-  transition: 0.4s;
+    border-radius:60px;
 
-  box-shadow: 0 12px 30px rgba(46, 125, 50, 0.35);
+    font-size:20px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 40px rgba(22,163,74,.35);
+
+    transition:.4s ease;
 }
 
-.primary-btn:hover {
-  transform: translateY(-6px);
+.order-btn:hover{
 
-  background: #25662a;
+    transform:translateY(-6px) scale(1.03);
+
+    background:linear-gradient(135deg,#f4c430,#d4af37);
+
+    color:#14532d;
+
+    box-shadow:0 20px 45px rgba(212,175,55,.45);
 }
 
-.secondary-btn {
-  padding: 18px 42px;
+.order-btn span{
 
-  border-radius: 50px;
-
-  border: 2px solid white;
-
-  background: transparent;
-
-  color: white;
-
-  cursor: pointer;
-
-  transition: 0.35s;
-
-  font-size: 18px;
+    font-size:22px;
 }
 
-.secondary-btn:hover {
-  background: white;
+/* EXPLORE BUTTON */
 
-  color: #222;
+.secondary-btn{
 
-  transform: translateY(-6px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    width:260px;
+    height:65px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    color:#fff;
+
+    border:2px solid rgba(255,255,255,.7);
+
+    border-radius:60px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.4s;
 }
+
+.secondary-btn:hover{
+
+    background:#fff;
+
+    color:#14532d;
+
+    transform:translateY(-6px);
+}
+
+.secondary-btn span{
+
+    transition:.4s;
+}
+
+.secondary-btn:hover span{
+
+    transform:translateX(8px);
+translateY (-5px);
+}
+
 
 /* ===============================
        ANIMATIONS
@@ -1392,4 +1441,13 @@ RIGHT CONTENT
   );
 
   pointer-events: none;
+}
+body {
+  opacity: 1;
+
+  transition: opacity 0.7s ease;
+}
+
+body.fade-out {
+  opacity: 0;
 }
