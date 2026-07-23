@@ -16,9 +16,11 @@ body {
   font-family: "Poppins", sans-serif;
   background: #f8f9f5;
   color: #222;
-  overflow-x: hidden;
-}
 
+  overflow-x: hidden !important;
+
+  border: 5px solid red;
+}
 /* ===============================
         NAVBAR
 =================================*/
@@ -356,8 +358,7 @@ nav a:hover::after {
 
 .secondary-btn:hover span{
 
-    transform:translateX(8px);
-translateY (-5px);
+    transform:translateX(8px,-5px);
 }
 
 
