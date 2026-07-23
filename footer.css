@@ -880,3 +880,115 @@
     background-position: 300%;
   }
 }
+/*==========================================================
+            MOBILE RESPONSIVE FOOTER
+==========================================================*/
+
+@media (max-width: 768px) {
+  .footer-top {
+    height: 120px;
+  }
+
+  .footer-heading {
+    font-size: 30px;
+    padding-top: 22px;
+  }
+
+  .footer-wave {
+    top: 75px;
+  }
+
+  .footer-wave svg {
+    height: 80px;
+  }
+
+  .footer-floating-logo {
+    top: 60px;
+  }
+
+  .logo-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-circle img {
+    width: 45px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+
+    padding: 70px 22px 20px;
+
+    gap: 35px;
+
+    text-align: center;
+  }
+
+  .footer-column {
+    border-right: none !important;
+
+    padding-right: 0 !important;
+  }
+
+  .footer-column h3::after {
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  .company-logo {
+    width: 75px;
+  }
+
+  .contact-card {
+    justify-content: flex-start;
+
+    text-align: left;
+  }
+
+  .social-row {
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .developer-section {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 20px;
+  }
+
+  .developer-left {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .developer-right {
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 100%;
+  }
+
+  .developer-image {
+    width: 75px;
+
+    height: 75px;
+  }
+
+  .developer-left h2 {
+    font-size: 22px;
+  }
+
+  .footer-bottom {
+    padding: 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+    line-height: 22px;
+  }
+}
