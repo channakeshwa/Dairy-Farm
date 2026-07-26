@@ -112,3 +112,52 @@ function goToCheckout() {
 
   window.location.href = "checkout.html";
 }
+const placeBtn = document.getElementById("placeOrderBtn");
+
+const popup = document.getElementById("paymentPopup");
+
+const closeBtn = document.querySelector(".close-payment");
+
+const paidBtn = document.getElementById("paidBtn");
+
+const paymentProof = document.getElementById("paymentProof");
+
+placeBtn.addEventListener("click", () => {
+  const payment = document.querySelector('input[name="payment"]:checked');
+
+  if (!payment) {
+    alert("Select Payment Method");
+
+    return;
+  }
+
+  if (payment.value === "UPI" || payment.value === "Online") {
+    popup.style.display = "flex";
+  } else {
+    // COD
+
+    alert("Order Placed Successfully");
+
+    // Firebase later
+  }
+});
+
+closeBtn.onclick = () => {
+  popup.style.display = "none";
+};
+
+paidBtn.onclick = () => {
+  popup.style.display = "none";
+
+  paymentProof.style.display = "block";
+
+  paymentProof.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
+window.onclick = (e) => {
+  if (e.target == popup) {
+    popup.style.display = "none";
+  }
+};

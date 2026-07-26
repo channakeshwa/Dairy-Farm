@@ -72,42 +72,59 @@
           <input type="text" placeholder="Area / Street" />
 
           <div class="grid">
-            <input type="text" placeholder="Landmark" />
-
-            <input type="text" placeholder="Pincode" />
-          </div>
-
-          <div class="grid">
             <input type="text" placeholder="City" />
-
-            <input type="text" placeholder="State" />
           </div>
-
           <h3>Payment Method</h3>
 
-          <label class="payment">
-            <input type="radio" checked name="payment" />
+          <div class="payment-options">
+            <label class="payment">
+              <input type="radio" name="payment" value="COD" checked />
 
-            Cash On Delivery
-          </label>
+              <span>Cash On Delivery</span>
+            </label>
 
-          <label class="payment">
-            <input type="radio" name="payment" />
+            <label class="payment">
+              <input type="radio" name="payment" value="UPI" />
 
-            UPI Payment
-          </label>
+              <span>UPI Payment</span>
+            </label>
 
-          <label class="payment">
-            <input type="radio" name="payment" />
+            <label class="payment">
+              <input type="radio" name="payment" value="Online" />
 
-            Online Payment
-          </label>
+              <span>Online Payment</span>
+            </label>
+          </div>
 
-          <button type="button" id="placeOrder">Place Order</button>
+          <button type="button" id="placeOrderBtn" class="place-order-btn">
+            Place Order
+          </button>
         </form>
       </div>
     </section>
 
+    <!-- QR Payment Popup -->
+
+    <div id="paymentPopup" class="payment-popup">
+      <div class="payment-card">
+        <span class="close-payment">&times;</span>
+
+        <h2>Scan & Pay</h2>
+
+        <img src="qr1.jpeg" class="payment-qr" />
+
+        <button id="paidBtn" class="paid-btn">✔ I've Paid</button>
+      </div>
+    </div>
+    <div id="paymentProof" style="display: none">
+      <h3>Upload Payment Screenshot</h3>
+
+      <input type="file" id="paymentImage" accept="image/*" />
+
+      <br /><br />
+
+      <button id="finalOrderBtn">Final Place Order</button>
+    </div>
     <script src="js/checkout.js"></script>
   </body>
 </html>
