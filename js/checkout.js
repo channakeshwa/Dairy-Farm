@@ -98,7 +98,7 @@ placeOrder.addEventListener("click", () => {
     city === "" ||
     state === ""
   ) {
-    alert("Please fill all the delivery details.");
+    showPopup("Please fill all the delivery details.");
 
     return;
   }
@@ -195,4 +195,25 @@ document.getElementById("finalOrderBtn").addEventListener("click", () => {
 
   // Redirect
   window.location.href = "cart.html";
+});
+// ===============================
+// CUSTOM POPUP
+// ===============================
+const customPopup = document.getElementById("customPopup");
+const popupMessage = document.getElementById("popupMessage");
+const popupOk = document.getElementById("popupOk");
+
+function showPopup(message) {
+  popupMessage.textContent = message;
+  customPopup.style.display = "flex";
+}
+
+popupOk.addEventListener("click", () => {
+  customPopup.style.display = "none";
+});
+
+customPopup.addEventListener("click", (e) => {
+  if (e.target === customPopup) {
+    customPopup.style.display = "none";
+  }
 });
