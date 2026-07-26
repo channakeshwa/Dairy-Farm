@@ -149,7 +149,7 @@ placeBtn.addEventListener("click", () => {
   const payment = document.querySelector('input[name="payment"]:checked');
 
   if (!payment) {
-    alert("Select Payment Method");
+    showPopup("Select Payment Method");
 
     return;
   }
@@ -159,7 +159,7 @@ placeBtn.addEventListener("click", () => {
   } else {
     // COD
 
-    alert("Order Placed Successfully");
+    showPopup("Order Placed Successfully");
 
     // Firebase later
   }
