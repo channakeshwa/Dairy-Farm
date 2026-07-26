@@ -69,8 +69,17 @@ function loadCheckout() {
         PLACE ORDER
 ==============================*/
 
-const placeOrder = document.getElementById("placeOrderBtn");
-placeOrder.addEventListener("click", () => {
+const placeBtn = document.getElementById("placeOrderBtn");
+
+const popup = document.getElementById("paymentPopup");
+
+const closeBtn = document.querySelector(".close-payment");
+
+const paidBtn = document.getElementById("paidBtn");
+
+const paymentProof = document.getElementById("paymentProof");
+
+placeBtn.addEventListener("click", () => {
   const name = document
     .querySelector("input[placeholder='Full Name']")
     .value.trim();
@@ -89,79 +98,36 @@ placeOrder.addEventListener("click", () => {
 
   const city = document.querySelector("input[placeholder='City']").value.trim();
 
-  if (
-    name === "" ||
-    phone === "" ||
-    house === "" ||
-    area === "" ||
-    pincode === "" ||
-    city === "" ||
-    state === ""
-  ) {
+  // Validate delivery details
+  if (!name || !phone || !house || !area || !city) {
     showPopup("Please fill all the delivery details.");
 
     return;
   }
 
-  const order = {
-    customer: {
-      name,
-
-      phone,
-
-      house,
-
-      area,
-
-      pincode,
-
-      city,
-
-      state,
-    },
-
-    products: cart,
-
-    total: grandTotal.innerText,
-
-    date: new Date().toLocaleString(),
-
-    orderId: "LDF" + Math.floor(Math.random() * 100000),
-  };
-
-  localStorage.setItem("order", JSON.stringify(order));
-
-  localStorage.removeItem("cart");
-
-  window.location.href = "success.html";
-});
-const placeBtn = document.getElementById("placeOrderBtn");
-
-const popup = document.getElementById("paymentPopup");
-
-const closeBtn = document.querySelector(".close-payment");
-
-const paidBtn = document.getElementById("paidBtn");
-
-const paymentProof = document.getElementById("paymentProof");
-
-placeBtn.addEventListener("click", () => {
+  // Check payment method
   const payment = document.querySelector('input[name="payment"]:checked');
 
   if (!payment) {
-    showPopup("Select Payment Method");
+    showPopup("Please select a payment method.");
 
     return;
   }
 
-  if (payment.value === "UPI" || payment.value === "Online") {
+  // COD
+  if (payment.value === "COD") {
+    showPopup("Order Placed Successfully!");
+
+    localStorage.removeItem("cart");
+
+    setTimeout(() => {
+      window.location.href = "success.html";
+    }, 1200);
+  }
+
+  // UPI / Online
+  else {
     popup.style.display = "flex";
-  } else {
-    // COD
-
-    showPopup("Order Placed Successfully");
-
-    // Firebase later
   }
 });
 
